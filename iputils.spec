@@ -1,12 +1,11 @@
 Name:           iputils
-Version:        s20121221
+Version:        s20151218
 Release:        10
 License:        GPL-2.0+
 Summary:        Network monitoring tools
 Url:            http://www.skbuff.net/iputils
 Group:          console/network
 Source0:        http://www.skbuff.net/iputils/%{name}-%{version}.tar.bz2
-Patch0:         fix-build-command-line-argument-with-gnutls.patch
 BuildRequires:  attr-dev
 BuildRequires:  libcap-dev
 BuildRequires:  openssl-dev
@@ -17,10 +16,9 @@ Network monitoring tools.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
-make %{?_smp_mflags} all USE_GNUTLS=no
+make %{?_smp_mflags} all USE_GNUTLS=no USE_GCRYPT=no
 
 %install
 install -m 0755 -d %{buildroot}/bin
