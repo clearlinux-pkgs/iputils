@@ -1,11 +1,11 @@
 Name:           iputils
 Version:        s20151218
-Release:        10
+Release:        11
 License:        GPL-2.0+
 Summary:        Network monitoring tools
 Url:            http://www.skbuff.net/iputils
 Group:          console/network
-Source0:        http://www.skbuff.net/iputils/%{name}-%{version}.tar.bz2
+Source0:        http://www.skbuff.net/iputils/iputils-s20151218.tar.bz2
 BuildRequires:  attr-dev
 BuildRequires:  libcap-dev
 BuildRequires:  openssl-dev
