@@ -1,6 +1,6 @@
 Name:           iputils
 Version:        s20151218
-Release:        20
+Release:        21
 License:        GPL-2.0+
 Summary:        Network monitoring tools
 Url:            http://www.skbuff.net/iputils
