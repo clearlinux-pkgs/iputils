@@ -1,0 +1,9 @@
+install -m 0755 -d %{buildroot}/usr/bin
+# SUID root programs
+for i in ping ping6 traceroute6; do
+  install -m 4555 $i %{buildroot}/usr/bin/
+done
+# Other programs
+for i in arping tracepath tracepath6; do
+  install -m 0755 $i %{buildroot}/usr/bin/
+done
