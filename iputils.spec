@@ -4,7 +4,7 @@
 #
 Name     : iputils
 Version  : 20121221
-Release  : 27
+Release  : 28
 URL      : http://www.skbuff.net/iputils/iputils-s20121221.tar.bz2
 Source0  : http://www.skbuff.net/iputils/iputils-s20121221.tar.bz2
 Summary  : Network monitoring tools
