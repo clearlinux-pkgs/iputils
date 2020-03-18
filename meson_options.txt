@@ -1,0 +1,60 @@
+option('USE_CAP', type : 'boolean', value : true,
+	description : 'Capatiblity support (with libcap)')
+
+option('USE_IDN', type : 'boolean', value : true,
+	description : 'IDN support (with libidn2)')
+
+option('USE_CRYPTO', type : 'combo',
+	choices : [ 'none', 'gcrypt', 'nettle', 'openssl', 'kernel' ], value : 'openssl',
+	description: 'Crypto library support')
+
+option('BUILD_ARPING', type : 'boolean', value : true,
+        description : 'Build arping')
+
+option('BUILD_CLOCKDIFF', type : 'boolean', value : true,
+        description : 'Build clockdiff')
+
+option('BUILD_PING', type : 'boolean', value : true,
+        description : 'Build ping')
+
+option('BUILD_RARPD', type : 'boolean', value : false,
+        description : 'Build rarpd')
+
+option('BUILD_RDISC', type : 'boolean', value : true,
+	description : 'Build rinfod')
+
+option('ENABLE_RDISC_SERVER', type : 'boolean', value : true,
+	description : 'Enable rinfod server code')
+
+option('BUILD_TFTPD', type : 'boolean', value : true,
+        description : 'Build tftpd')
+
+option('BUILD_TRACEPATH', type : 'boolean', value : true,
+        description : 'Build tracepath')
+
+option('BUILD_TRACEROUTE6', type : 'boolean', value : false,
+        description : 'Build traceroute6')
+
+option('BUILD_NINFOD', type : 'boolean', value : true,
+	description : 'Build ninfod')
+
+option('NINFOD_MESSAGES', type : 'boolean', value : true,
+	description : 'Enable ninfod syslog messages')
+
+option('BUILD_MANS', type : 'boolean', value : true,
+	description : 'Build manuals')
+
+option('BUILD_HTML_MANS', type : 'boolean', value : false,
+	description : 'Build html manuals')
+
+option('NO_SETCAP_OR_SUID', type : 'boolean', value : false,
+	description : 'Allow disabling build-aux/setcap-setuid.sh')
+
+option('ARPING_DEFAULT_DEVICE', type : 'string', value : '',
+	description : 'Default device for arping')
+
+option('systemdunitdir', type: 'string', value: '',
+	description: 'Directory for systemd units')
+
+option('USE_GETTEXT', type: 'boolean', value: true,
+	description: 'Enable I18N')

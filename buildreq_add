@@ -3,5 +3,10 @@
 # desirable. One name per line, no whitespace.
 #
 attr-dev
+#docbook-xml
 libcap-dev
+#libxml2
+#libxslt
+#libxslt-bin
 openssl-dev
+#xmlto
