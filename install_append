@@ -1,4 +1,6 @@
+mv %{buildroot}/usr/sbin/* %{buildroot}/usr/bin/
 # SUID root programs
 for i in ping ping traceroute6; do
   chmod 4555 %{buildroot}/usr/bin/$i
 done
+

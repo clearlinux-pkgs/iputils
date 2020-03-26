@@ -4,7 +4,7 @@
 #
 Name     : iputils
 Version  : s20190709
-Release  : 32
+Release  : 33
 URL      : https://github.com/iputils/iputils/archive/s20190709.tar.gz
 Source0  : https://github.com/iputils/iputils/archive/s20190709.tar.gz
 Summary  : Network monitoring tools
@@ -89,7 +89,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1584570635
+export SOURCE_DATE_EPOCH=1585256624
 export GCC_IGNORE_WERROR=1
 export CFLAGS="-O2 -g -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -Wno-error -Wl,-z,max-page-size=0x1000 -march=westmere -mtune=haswell"
 export CXXFLAGS=$CFLAGS
@@ -115,10 +115,12 @@ cp %{_builddir}/iputils-s20190709/ninfod/COPYING %{buildroot}/usr/share/package-
 DESTDIR=%{buildroot} ninja -C builddir install
 %find_lang iputils
 ## install_append content
+mv %{buildroot}/usr/sbin/* %{buildroot}/usr/bin/
 # SUID root programs
 for i in ping ping traceroute6; do
 chmod 4555 %{buildroot}/usr/bin/$i
 done
+
 ## install_append end
 
 %files
@@ -128,11 +130,11 @@ done
 %defattr(-,root,root,-)
 /usr/bin/arping
 /usr/bin/clockdiff
+/usr/bin/ninfod
+/usr/bin/rarpd
+/usr/bin/rdisc
 /usr/bin/tftpd
 /usr/bin/tracepath
-/usr/sbin/ninfod
-/usr/sbin/rarpd
-/usr/sbin/rdisc
 
 %files license
 %defattr(0644,root,root,0755)
