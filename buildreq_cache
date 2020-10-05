@@ -1,3 +1,4 @@
-s20190709
+s20200821
 libxslt-bin
+pkgconfig(libidn2)
 pkgconfig(systemd)

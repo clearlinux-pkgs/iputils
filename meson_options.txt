@@ -4,10 +4,6 @@ option('USE_CAP', type : 'boolean', value : true,
 option('USE_IDN', type : 'boolean', value : true,
 	description : 'IDN support (with libidn2)')
 
-option('USE_CRYPTO', type : 'combo',
-	choices : [ 'none', 'gcrypt', 'nettle', 'openssl', 'kernel' ], value : 'openssl',
-	description: 'Crypto library support')
-
 option('BUILD_ARPING', type : 'boolean', value : true,
         description : 'Build arping')
 
@@ -21,12 +17,12 @@ option('BUILD_RARPD', type : 'boolean', value : false,
         description : 'Build rarpd')
 
 option('BUILD_RDISC', type : 'boolean', value : true,
-	description : 'Build rinfod')
+	description : 'Build RDISC')
 
 option('ENABLE_RDISC_SERVER', type : 'boolean', value : true,
-	description : 'Enable rinfod server code')
+	description : 'Enable RDISC server code')
 
-option('BUILD_TFTPD', type : 'boolean', value : true,
+option('BUILD_TFTPD', type : 'boolean', value : false,
         description : 'Build tftpd')
 
 option('BUILD_TRACEPATH', type : 'boolean', value : true,
@@ -48,7 +44,19 @@ option('BUILD_HTML_MANS', type : 'boolean', value : false,
 	description : 'Build html manuals')
 
 option('NO_SETCAP_OR_SUID', type : 'boolean', value : false,
-	description : 'Allow disabling build-aux/setcap-setuid.sh')
+       description : 'Disable setting setcap or setuid with build-aux/setcap-setuid.sh')
+
+option('SETCAP_OR_SUID_ARPING', type : 'boolean', value : false,
+	description : 'Set setcap or setuid on arping with build-aux/setcap-setuid.sh')
+
+option('SETCAP_OR_SUID_CLOCKDIFF', type : 'boolean', value : true,
+	description : 'Set setcap or setuid on clockdiff with build-aux/setcap-setuid.sh')
+
+option('SETCAP_OR_SUID_PING', type : 'boolean', value : true,
+	description : 'Set setcap or setuid on ping with build-aux/setcap-setuid.sh')
+
+option('SETCAP_OR_SUID_TRACEROUTE6', type : 'boolean', value : true,
+	description : 'Set setcap or setuid on traceroute6 with build-aux/setcap-setuid.sh')
 
 option('ARPING_DEFAULT_DEVICE', type : 'string', value : '',
 	description : 'Default device for arping')
