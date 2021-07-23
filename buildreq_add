@@ -1,8 +1,7 @@
-#
-# This file contains extra pkgconfig build requirements that don't get picked up but are 
-# desirable. One name per line, no whitespace.
-#
+# This file contains additional build requirements that did not get
+# picked up automatically. One name per line, no whitespace.
 attr-dev
 docbook-xml
+iproute2-dev
 libcap-dev
 openssl-dev

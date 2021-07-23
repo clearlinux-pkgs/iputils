@@ -43,7 +43,7 @@ option('BUILD_MANS', type : 'boolean', value : true,
 option('BUILD_HTML_MANS', type : 'boolean', value : false,
 	description : 'Build html manuals')
 
-option('NO_SETCAP_OR_SUID', type : 'boolean', value : false,
+option('NO_SETCAP_OR_SUID', type : 'boolean', value : true,
        description : 'Disable setting setcap or setuid with build-aux/setcap-setuid.sh')
 
 option('SETCAP_OR_SUID_ARPING', type : 'boolean', value : false,
@@ -57,6 +57,9 @@ option('SETCAP_OR_SUID_PING', type : 'boolean', value : true,
 
 option('SETCAP_OR_SUID_TRACEROUTE6', type : 'boolean', value : true,
 	description : 'Set setcap or setuid on traceroute6 with build-aux/setcap-setuid.sh')
+
+option('SETCAP_OR_SUID_RDISC', type : 'boolean', value : false,
+	description : 'Set setcap or setuid on rdisc with build-aux/setcap-setuid.sh, NOTE: this is strongly discouraged, recommended way is to run it as systemd service which does not require it to be enabled')
 
 option('ARPING_DEFAULT_DEVICE', type : 'string', value : '',
 	description : 'Default device for arping')
