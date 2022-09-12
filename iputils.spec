@@ -4,7 +4,7 @@
 #
 Name     : iputils
 Version  : 20210722
-Release  : 36
+Release  : 37
 URL      : https://github.com/iputils/iputils/archive/20210722/iputils-20210722.tar.gz
 Source0  : https://github.com/iputils/iputils/archive/20210722/iputils-20210722.tar.gz
 Summary  : Network monitoring tools
