@@ -1,3 +1,5 @@
-mv %{buildroot}/usr/sbin/* %{buildroot}/usr/bin/
+if [[ -d %{buildroot}/usr/sbin ]]; then
+	mv %{buildroot}/usr/sbin/* %{buildroot}/usr/bin/
+fi
 # SUID root program
 chmod 4555 %{buildroot}/usr/bin/ping

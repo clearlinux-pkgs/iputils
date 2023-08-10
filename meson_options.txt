@@ -1,7 +1,7 @@
 # Copyright (c) Iputils Project, 2017-2021
 
 option('USE_CAP', type : 'boolean', value : true,
-	description : 'Capatiblity support (with libcap)')
+	description : 'Capability support (with libcap)')
 
 option('USE_IDN', type : 'boolean', value : true,
 	description : 'IDN support (with libidn2)')
@@ -15,23 +15,8 @@ option('BUILD_CLOCKDIFF', type : 'boolean', value : true,
 option('BUILD_PING', type : 'boolean', value : true,
         description : 'Build ping')
 
-option('BUILD_RARPD', type : 'boolean', value : false,
-        description : 'Build rarpd')
-
-option('BUILD_RDISC', type : 'boolean', value : true,
-	description : 'Build RDISC')
-
-option('ENABLE_RDISC_SERVER', type : 'boolean', value : true,
-	description : 'Enable RDISC server code')
-
 option('BUILD_TRACEPATH', type : 'boolean', value : true,
         description : 'Build tracepath')
-
-option('BUILD_NINFOD', type : 'boolean', value : true,
-	description : 'Build ninfod')
-
-option('NINFOD_MESSAGES', type : 'boolean', value : true,
-	description : 'Enable ninfod syslog messages')
 
 option('BUILD_MANS', type : 'boolean', value : true,
 	description : 'Build manuals')
@@ -50,9 +35,6 @@ option('SETCAP_OR_SUID_CLOCKDIFF', type : 'boolean', value : true,
 
 option('SETCAP_OR_SUID_PING', type : 'boolean', value : true,
 	description : 'Set setcap or setuid on ping with build-aux/setcap-setuid.sh')
-
-option('SETCAP_OR_SUID_RDISC', type : 'boolean', value : false,
-	description : 'Set setcap or setuid on rdisc with build-aux/setcap-setuid.sh, NOTE: this is strongly discouraged, recommended way is to run it as systemd service which does not require it to be enabled')
 
 option('ARPING_DEFAULT_DEVICE', type : 'string', value : '',
 	description : 'Default device for arping')

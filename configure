@@ -1,3 +1,2 @@
--DBUILD_RARPD=true
 -DBUILD_MANS=true
 -DBUILD_HTML_MANS=false
