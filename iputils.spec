@@ -6,10 +6,10 @@
 # autospec commit: c1050fe
 #
 Name     : iputils
-Version  : 20221126
-Release  : 40
-URL      : https://github.com/iputils/iputils/archive/20221126/iputils-20221126.tar.gz
-Source0  : https://github.com/iputils/iputils/archive/20221126/iputils-20221126.tar.gz
+Version  : 20231222
+Release  : 41
+URL      : https://github.com/iputils/iputils/archive/20231222/iputils-20231222.tar.gz
+Source0  : https://github.com/iputils/iputils/archive/20231222/iputils-20231222.tar.gz
 Summary  : Network monitoring tools
 Group    : Development/Tools
 License  : BSD-3-Clause GPL-2.0
@@ -33,7 +33,7 @@ BuildRequires : pkgconfig(zlib)
 %define debug_package %{nil}
 
 %description
-[![Build Status](https://travis-ci.org/iputils/iputils.svg?branch=master)](https://travis-ci.org/iputils/iputils)
+[![Build Status](https://github.com/iputils/iputils/actions/workflows/ci.yml/badge.svg)](https://github.com/iputils/iputils/actions/workflows/ci.yml)
 [![Coverity Status](https://scan.coverity.com/projects/1944/badge.svg?flat=1)](https://scan.coverity.com/projects/1944)
 
 %package bin
@@ -79,15 +79,15 @@ setuid components for the iputils package.
 
 
 %prep
-%setup -q -n iputils-20221126
-cd %{_builddir}/iputils-20221126
+%setup -q -n iputils-20231222
+cd %{_builddir}/iputils-20231222
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1701973089
+export SOURCE_DATE_EPOCH=1703615376
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="-O2 -g -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=32 -Wformat -Wformat-security -Wno-error -Wl,-z,max-page-size=0x4000 -march=westmere"
 CLEAR_INTERMEDIATE_CXXFLAGS=$CLEAR_INTERMEDIATE_CFLAGS
