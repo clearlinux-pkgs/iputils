@@ -6,10 +6,10 @@
 # autospec commit: 65cf152
 #
 Name     : iputils
-Version  : 20250602
-Release  : 46
-URL      : https://github.com/iputils/iputils/archive/20250602/iputils-20250602.tar.gz
-Source0  : https://github.com/iputils/iputils/archive/20250602/iputils-20250602.tar.gz
+Version  : 20250605
+Release  : 47
+URL      : https://github.com/iputils/iputils/archive/20250605/iputils-20250605.tar.gz
+Source0  : https://github.com/iputils/iputils/archive/20250605/iputils-20250605.tar.gz
 Summary  : Network monitoring tools
 Group    : Development/Tools
 License  : BSD-3-Clause GPL-2.0
@@ -79,10 +79,10 @@ setuid components for the iputils package.
 
 
 %prep
-%setup -q -n iputils-20250602
-cd %{_builddir}/iputils-20250602
+%setup -q -n iputils-20250605
+cd %{_builddir}/iputils-20250605
 pushd ..
-cp -a iputils-20250602 buildavx2
+cp -a iputils-20250605 buildavx2
 popd
 
 %build
@@ -90,7 +90,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1748873512
+export SOURCE_DATE_EPOCH=1749224611
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="-O2 -g -Wp,-D_FORTIFY_SOURCE=2 -fexceptions  --param=ssp-buffer-size=32 -Wformat -Wformat-security -Wno-error -Wl,-z,max-page-size=0x4000 -march=westmere"
 CLEAR_INTERMEDIATE_CXXFLAGS=$CLEAR_INTERMEDIATE_CFLAGS
